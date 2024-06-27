@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+}
+
+.header {
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 30px;
+}
