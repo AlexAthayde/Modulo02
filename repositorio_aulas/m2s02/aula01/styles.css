@@ -1,0 +1,15 @@
+.calc {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    width: 90px;
+    margin-top: 10px;
+}

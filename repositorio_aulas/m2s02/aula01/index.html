@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana02 Aula01</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">  
+        <h1>Calculadora Simples</h1>
+
+        <div class="row">
+        <span>Número 1:</span>
+        <input type="number" placeholder="Insira o primeiro Número">
+        </div>
+
+        <div class="row">
+        <span>Número 2:</span>
+        <input type="number" placeholder="Insira o segundo Número">
+        </div>
+
+        <button>Calcular</button>
+
+        <button>Validar</button>
+    </div>
+</body>
+</html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+     
+    </head>
+    <body>
+        <div class="container">
+            <h1>Calculadora Simples</h1>
+
+            <div>
+                <span>Número 1:</span>
+                <input id="input-num1" type="number">
+            </div>
+
+            <div class="row">
+                <span>Número 2:</span>
+                <input id="input-num2" type="number">
+            </div>            
+
+            <button onclick="calcular()">Calcular</button>
+            <!-- class="error" -->
+            <span id="txtResultado">Resultado:</span>
+
+            <button>Validar</button>
+        </div>
+
+        <script>
+            const numero1 = document.getElementById('input-num1')
+            const numero2 = document.getElementById('input-num2')
+            const txtResultado = document.getElementById('txtResultado')
+
+            function calcular() {
+                try {
+                    console.log('Calculando alguma coisa...')                
+                    const resultado = parseInt(numero1.value) + parseInt(numero2.value)
+                    txtResultado.innerText = `Resultado: ${resultado}`    
+                    txtResultado.classList.remove('error')
+                } catch (error) {
+                    txtResultado.innerText = 'Não foi possível calcular.'
+                    txtResultado.classList.add('error')
+                }
+            }
+        </script>
+
+        <!-- <script src="main.js"></script> -->
+    </body>
+</html>

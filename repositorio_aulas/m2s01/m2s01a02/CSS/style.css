@@ -1,0 +1,66 @@
+h1 {
+    color: green;
+}
+
+#subtitulo {
+    color: purple;
+}
+
+h3 {
+    color: blue;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: #cecece;
+    text-align: center;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+img[src] {
+    height: 150px;
+    border: 5px solid red;
+}
+
+input[type="text"] {
+    background: #cecece;
+    border: 0;
+    outline: 0;
+    height: 52px;
+    width: 100%;
+    padding: 16px;
+    font-size: 24px;
+}
+
+button{
+    height: 52px;
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    background: gray;
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+button:hover {
+    background: #353535;
+    transform: scale(2);
+    box-shadow: ;
+}
+
+.container {
+    width: 720px;
+}
