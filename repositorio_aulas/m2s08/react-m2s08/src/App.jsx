@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
+import { getUsers } from './services/web'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    // EXECUTA ALGO NO INICIO DO COMPONENTE
+    console.log('componente iniciado App.jsx')
+    async function fetchData() {
+      const response = await getUsers()
+      console.log(response)
+    }
+    fetchData();
+  }, [])
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ul>
+        {users.map(user => <li key={user.id}>{user.name} ({user.email})</li>)}
+        {/* <li>Nome (email)</li> */}
+        {/* <li>Yan Esteves (yan.m.esteves@gmail.com)</li>
+        <li>Joao Coelho (joao.coelho@gmail.com)</li> */}
+      </ul>
     </>
   )
 }
